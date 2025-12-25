@@ -64,6 +64,7 @@ main{
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 10px;
@@ -83,4 +84,10 @@ main{
 .bubble:hover{
     cursor: pointer;
     background-color: rgb(8, 70, 49);
+}
+
+#restart{
+    padding: 5px 10px;
+    border: 2px solid rgb(20, 128, 26);
+    border-radius: 5px;
 }

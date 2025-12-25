@@ -17,7 +17,10 @@ function timer(){
             document.querySelector("#timer").textContent = time
         }else{
             clearInterval(timeInterval)
-            document.querySelector(".panelB").innerHTML=`<h1>Game Over</h1`;
+            document.querySelector(".panelB").innerHTML = `
+                <h1>Game Over</h1>
+                <button id="restart">Restart</button>
+            `;
         }
     }, 1000)
 
@@ -49,3 +52,20 @@ document.querySelector(".panelB")
         hitNum()
     }
 })
+
+
+
+// Restart the game
+document.addEventListener("click", function(e){
+    if(e.target.id === "restart"){
+        time = 60;
+        score = 0;
+
+        document.querySelector("#timer").textContent = time;
+        document.querySelector("#scoreVal").textContent = score;
+
+        makeBubble();
+        hitNum();
+        timer();
+    }
+});
